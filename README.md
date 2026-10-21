@@ -14,7 +14,7 @@ The notebook was built for a Kaggle-style text classification competition and ru
 | Epochs trained | 8 (early stopping) |
 | Classes | 6 emotions |
 
-![Training curves](training_curves.png)
+![Training curves](Images/training_curves.png)
 
 Validation F1 peaks at epoch 4. After that, training loss keeps falling while validation loss rises, which is the start of overfitting, so early stopping halts training and the epoch-4 weights are kept.
 
@@ -24,7 +24,7 @@ Validation F1 peaks at epoch 4. After that, training loss keeps falling while va
 
 The training set is imbalanced: the two largest classes have around 100,000 tweets each, while the smallest has about 12,000.
 
-![Label distribution](label_distribution.png)
+![Label distribution](Images/label_distribution.png)
 
 Because of this, the model is evaluated with **macro F1** (the average F1 across classes, each weighted equally) rather than accuracy, and the loss function uses class weights so that the rare emotions are not ignored.
 
